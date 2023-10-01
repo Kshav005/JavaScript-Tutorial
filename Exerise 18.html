@@ -1,0 +1,73 @@
+<!-- Let's put our skills into practice! Create a navbar and then ask the user a color, then change the color of the first element according to the user input.  -->
+<!-- If you couldn't solve the questions then don't worry! The solution is provided below but make sure you try and give your best first. -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 18</title>
+    <style>
+        body {
+            margin: 0vw;
+            padding: 0vw
+        }
+        .nav {
+            background-color: darkslateblue;
+            color: white;
+            font-size: 2vw;
+            width: 10vw;
+            height: 50vw;
+            position: sticky;
+        }
+        .txt {
+            margin-bottom: 5vw;
+        }
+        .txt:hover {
+            filter: brightness(0.8);
+            cursor: pointer;
+        }
+
+
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="txt" id="contain1">Home</div>
+        <div class="txt" id="contain2">Info</div>
+        <div class="txt" id="contain3">Contact</div>
+        <div class="txt" id="contain4">About</div>
+    </div>
+
+    <script>
+        let a = prompt("Enter a valid color : ")
+        let b = document.querySelector(".txt")
+        b.style.color = a
+
+        // Hence the exercise is complete! Congrats!
+    </script>
+</body>
+</html>
+
+
+
+
+

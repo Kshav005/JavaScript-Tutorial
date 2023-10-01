@@ -1,0 +1,28 @@
+<!-- Run this file in your browser and check out the console tab of it. -->
+
+<!DOCTYPE html>
+<head>
+    <title>Sample</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <!-- Comment sample -->
+            <li>Home</li>
+            <li>About Me</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <script>
+        let a = document.body
+        console.log("The first child of this html is : ", a.firstChild)     // It will show it as 'text' as the node is print. If you see the html, then you will see empty spaces which is used to beautify and manage the elements. To get only element node, we will be using another method.
+        console.log("The first element child of this html is : ", a.firstElementChild)              // This will return the desired result
+        console.log("The last child of this html is : ", a.lastChild)
+        console.log("The next child after first child of this html is : ", a.firstElementChild.nextElementSibling)
+        console.log("The previous child after last child of this html is : ", a.lastElementChild.previousElementSibling)
+
+        // Thus it is suggested to use the word 'ELEMENT' whenever you want to work on element parent or child.
+
+    </script>
+</body>
+</html>

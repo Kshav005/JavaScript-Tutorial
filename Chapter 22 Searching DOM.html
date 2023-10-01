@@ -1,0 +1,40 @@
+<!-- Welcome to another chapter of JS with Browser tutorial and now we are going to learn about the searching of element in a DOM. If you remember, then a DOM is an object model of all the HTML elements. We use this DOM to manipulate anything! -->
+
+<!DOCTYPE html>
+<head>
+    <title>SAMPLE</title>
+    <style>
+        .texts {
+            font-size: 2vw;
+        }
+    </style>
+</head>
+<body>
+    <p class="texts">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores assumenda commodi vitae, debitis, impedit similique, maiores excepturi at recusandae.</p>
+    <p class="texts">ipsum, dolor sit amet consectetur adipisicing elit. A vitae, debitis, impedit similique, maiores excepturi at recusandae.</p>
+    <p class="texts">ectetur adipisicing elit. Asperiores assumenda commodi vitae, debitis, impedit similique, maiores excepturi at recusandae.</p>
+
+    <script>
+        // Let's try manipulating the color of first text element
+        let cl = document.getElementsByClassName("texts")[0]
+        cl.style.color = "red"
+
+        // Same with second text element
+        let cl2 = document.getElementsByClassName("texts")[1]
+        cl2.style.background = "lightgreen"
+
+        // We can also use the query selector which uses CSS selectors (. for classes and # for ids).
+        let cl3 = document.querySelectorAll(".texts")
+        cl3[2].style.border = "2px dashed black"
+
+        // To select the first query, you can, 
+        document.querySelector(".text")
+
+        // Moreover, if you want to get all the same tag elements, you can use,
+        document.getElementsByTagName("p")
+
+        // To search an element under a parent element
+        document.querySelector(".class").getElementsByTagName("p")
+    </script>
+</body>
+</html>

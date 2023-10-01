@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 24</title>
+</head>
+<body>
+    <p id="a1">There is a cat!</p>
+    <p id="a2">I am not an alien.</p>
+
+    <script>
+        // Inner HTML is a function in JS, which is used to get the information stored in a tag as a string.
+        // Suppose, I want to get 'There is a cat!' in a form of string. Only valid for element nodes.
+        console.log(a1.innerHTML)           // Prints the information in a form of string.
+
+        // You can even change the information under the tag. I will be replacing 'cat' with 'dog' and you can see the result when you open it up on the browser.
+        a1.innerHTML = "There is a dog"
+        console.log(a1.innerHTML)     
+        
+        // It can also accept some tags.
+        a1.innerHTML = "There is a <i>DOG</i> in italics"
+
+        // Outer HTML is another function which returns the whole information along with the tag.
+        console.log(a2.outerHTML)
+
+        // You can even change the whole tag into another tag.
+        a2.outerHTML = '<div style="background-color:cyan">I am changed?</div>'
+
+        // The chapter has been completed, now you can perform exercises upto Chapter 19 if you haven't!
+    </script>   
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!-- For this chapter, we are going to look into manipulation of document function of javascript. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a1 {
+            font-size: 0.8vw;
+        }
+        .a2 {
+            color: red;
+        }
+        #abc {
+            font-size: 2vw;
+            letter-spacing: 0.3vw;
+        }
+    </style>
+</head>
+<body>
+    <p class="a1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro officiis corrupti magnam qui vel soluta nihil in minima necessitatibus labore laboriosam esse alias tempore, expedita rem quam, debitis veritatis at!</p>
+    <p class="a2" id="abc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro officiis corrupti magnam qui vel soluta nihil in minima necessitatibus labore laboriosam esse alias tempore, expedita rem quam, debitis veritatis at!</p>
+
+
+    <script>
+        let a = document.getElementsByClassName("a2")
+
+        // To match a classname or an id. (Will work only if it is used in CSS.)
+        console.log(a.matches(".class"))             // Will return False as the element doesn't have such class
+        console.log(a.matches("#abc"))           // This will return True as there is an element present with such id.
+
+        // To see if html has an element with class name/id (This one will check if it's available, if not, then goes to the parent element to check if it's available there and so on)
+        console.log(a.closest(".class"))
+
+    </script>
+</body>
+</html>
