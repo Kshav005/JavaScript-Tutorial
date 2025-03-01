@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p style="font-size: 3vw; border: 0.5vw dotted purple; text-align:center; background-color:beige">Hey there</p>
+    <br>
+    <p id="a1" style="font-size:2vw">Click here</p>
+    <p id="a2" style="font-size:2vw">Click here now</p>
+    <p id="a3" style="font-size:2vw">Click here after all</p>
+    <button id="a4" style="font-size: 2.5vw;">This is a button.</button>
+    <p id="a5" style="font-size:2vw">Don't click here!!</p>
+    
+
+    <script>
+        // In this chapter we are going to learn about the most amazing feature that is events in javascript. Event is referred to the user actions such as mouse click, keyboard button, etc. You can even trigger animations at certain points for a particular element.
+        // Let's try!
+        let p = document.getElementById("a1")
+        p.setAttribute("onclick", "alert('Activated')")
+        
+        // If you click on that element, then you will be seeing that an alert will appear!
+        // It can be done in more ways too.
+        let f = document.getElementById("a2")
+        f.addEventListener("click", function () {
+            alert("Activated using event listener!")
+        })
+
+        let h = document.getElementById("a3")
+        h.onclick = ()=> {
+            alert("Activated using another event listener!")
+        }
+
+        // To activate something when user hovers over an element
+        let i = document.getElementById("a4")
+        i.addEventListener("mouseover", function () {
+            console.log("Seems cool?")
+        })
+
+        // To get some valuable info from an element 
+        let j = document.getElementById("a5")
+        j.addEventListener("click", function (e) {
+            console.log(e.target)                   // To print which element is using this function
+            console.log(e.clientX, e.clientY)   // To print the x, y coordinates of click event
+        }) 
+        
+    </script>
+</body>
+</html>

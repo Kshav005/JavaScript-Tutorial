@@ -14,7 +14,7 @@ let g = undefined                        // Undefined
 let h                                   // Automatically JS considers it as undefined.
 
 // Now let's try printing all the variables.
-console.log(a, b, c, d, e, f, g)            
+console.log(a, b, c, d, e, f, g)
 
 // To know about the type of a variable, we use 'typeof'
 console.log(typeof(b))

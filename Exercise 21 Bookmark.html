@@ -1,0 +1,65 @@
+<!-- In this special exercise, create a bookmark webpage, which will have a button to add a bookmark. If you could not solve it by yourself then don't worry, the solution has been provided below and you can look at it! Good luck. -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarks</title>
+    <style>
+        .buttons {
+            width: 25vw;
+            font-size: 4vw;
+        }
+        .bookmarks {
+            font-size: 2vw;
+            border-top: 0.3vw solid black;
+            margin-top: 10vw;
+        }
+    </style>
+</head>
+<body>
+    <button class="buttons" id="add">Add +</button>
+    <div class="bookmarks">
+        <h3 style="text-align: center;">Bookmarks saved below</h3>
+    </div>
+
+    <script>
+        let addbutton = document.getElementById("add")
+        let bookmarks = document.getElementsByClassName("bookmarks")
+        addbutton.addEventListener("click", (e) => {
+        let a = prompt("Enter a bookmark : ")
+        let b = document.createElement("div")
+        b.innerHTML = a
+        b.style = "border: 0.2vw dashed red; text-align: center; font-size:2vw; margin-top: 2vw"
+        bookmarks[0].append(b)
+        b.addEventListener("mouseover", function(e) {
+            b.style.border = "0.2vw dashed blue"
+            b.style.backgroundColor = "antiquewhite"
+            b.style.cursor = "pointer"
+        })
+        b.addEventListener("mouseout", function(e) {
+            b.style = "border: 0.2vw dashed red; text-align: center; font-size:2vw; margin-top: 2vw"
+        })
+        })
+
+    </script>
+</body>
+</html>

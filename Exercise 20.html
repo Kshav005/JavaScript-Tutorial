@@ -1,0 +1,41 @@
+<!-- To complete this exercise, you are required to create a small basic webpage, where a text element is there and a button below it. Whenever user clicks on the button, a prompt should appear which will take a random word/sentence as input and change the text element to that input. -->
+<!-- If you couldn't solve the problem, then the solution is given below, you can look at it and try to understand. Good luck! -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X cercise 20</title>
+</head>
+<body>
+    <p id="a" style="font-size:1.7vw">Hello friends.</p>
+    <button id="b" style="font-size: 2vw;">Click here to edit the program</button>
+
+    <script>
+        let a = document.getElementById("a")
+        let b = document.getElementById("b")
+        b.addEventListener("click", (e) => {
+            let c = prompt("Enter a word : ")
+            a.innerHTML = c
+        }) 
+    </script>
+    <!-- Hence, the exercise has been completed! Congrats. -->
+</body>
+</html>
